@@ -15,6 +15,12 @@ app.get('',(req, res)=>{
 app.get('/help',(req, res)=>{
     res.send('this is help page')
 })
+app.get('/json', (req, res)=>{
+    res.send({
+        "name": "avinash",
+        "age": 27
+    })
+})
 //app.com
 //app.com/help
 //app.com/about
