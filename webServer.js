@@ -45,3 +45,11 @@ app.get('/json', (req, res)=>{
 app.listen(3000, ()=>{
     console.log('server is up on post 3000')
 })
+
+
+//make public folder and use this line to connect 
+
+app.use(express.static(path.join(__dirname, '../public')))
+
+index.html will run default
+and other file will work base url / file name
