@@ -5,22 +5,40 @@ make a folder src
 make a file for starting point (app.js)
 
 
+const path = require('path');
 const express = require('express');
 
+
 const app = express()
+
+// console.log(__dirname)
+// console.log(__filename)
+// console.log(path.join(__dirname, '../public'))
+
+app.use(express.static(path.join(__dirname, '../public')))
+
+
+
+
+
 app.get('',(req, res)=>{
     res.send('hello express!')
 })
-//to set route on this server
 app.get('/help',(req, res)=>{
     res.send('this is help page')
+})
+app.get('/about', (req, res)=>{
+    res.send('this is about page')
+})
+app.get('/weather',(req, res)=>{
+    res.send('<h1>hello weathr</h1>')
 })
 app.get('/json', (req, res)=>{
     res.send({
         "name": "avinash",
         "age": 27
     })
-})
+}) 
 //app.com
 //app.com/help
 //app.com/about
