@@ -11,6 +11,7 @@ const app = express()
 app.get('',(req, res)=>{
     res.send('hello express!')
 })
+//to set route on this server
 app.get('/help',(req, res)=>{
     res.send('this is help page')
 })
